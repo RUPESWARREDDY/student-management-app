@@ -18,13 +18,20 @@ function NavBar() {
           justifyContent: "space-between",
           alignItems: "center",
           mb: 3,
-          backgroundColor:"darkblue",
-          height:"50px",
-          padding:"0px 10px"
+          backgroundColor: "darkblue",
+          height: "50px",
+          padding: "0px 10px",
         }}
       >
-        <Typography variant="h5" color="white">Student Dashboard</Typography>
-        <Button variant="contained" color="error" onClick={handleLogout} size="small">
+        <Typography variant="h5" color="white">
+          Student Management System
+        </Typography>
+        <Button
+          variant="contained"
+          color="error"
+          onClick={handleLogout}
+          size="small"
+        >
           Logout
         </Button>
       </Box>
