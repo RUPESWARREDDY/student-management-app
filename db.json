@@ -1,0 +1,36 @@
+{
+  "students": [
+    {
+      "id": "dcdc",
+      "name": "Rupeswar Reddy Goddeti",
+      "age": 12,
+      "grade": "B"
+    },
+    {
+      "id": "286e",
+      "name": "Alice",
+      "age": 10,
+      "grade": "A"
+    },
+    {
+      "id": "b3ac",
+      "name": "pavan",
+      "age": 25,
+      "grade": "A"
+    },
+    {
+      "id": "6633",
+      "name": "Alice",
+      "age": 10,
+      "grade": "A"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "admin@gmail.com",
+      "password": "admin123",
+      "token": "abc123"
+    }
+  ]
+}
