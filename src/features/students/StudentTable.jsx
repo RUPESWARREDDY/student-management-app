@@ -1,4 +1,4 @@
-import React, { useEffect,useState} from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Button } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { DataGrid } from "@mui/x-data-grid";
@@ -13,9 +13,9 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 export default function StudentTable({ filterGrade }) {
-  const [open, setOpen] =useState(false);
-  const [selectedStudentId, setSelectedStudentId] =useState(null);
-  const [selectedStudentName, setSelectedStudentName] =useState("");
+  const [open, setOpen] = useState(false);
+  const [selectedStudentId, setSelectedStudentId] = useState(null);
+  const [selectedStudentName, setSelectedStudentName] = useState("");
   const dispatch = useDispatch();
   const students = useSelector((state) => state.students.list);
   const navigate = useNavigate();
@@ -29,16 +29,21 @@ export default function StudentTable({ filterGrade }) {
       : students.filter((s) => s.grade === filterGrade);
 
   const columns = [
-    { field: "name", headerName: "Name", width: 550,
+    {
+      field: "name",
+      headerName: "Name",
+      width: 550,
       renderCell: (params) => (
         <Button
           variant="text"
-          onClick={() => navigate(`/students/${params.row.id}`, { state: params.row })}
+          onClick={() =>
+            navigate(`/students/${params.row.id}`, { state: params.row })
+          }
         >
           {params.row.name}
         </Button>
       ),
-     },
+    },
     { field: "age", headerName: "Age", width: 200 },
     { field: "grade", headerName: "Grade", width: 200 },
     {
@@ -74,11 +79,11 @@ export default function StudentTable({ filterGrade }) {
         />
       </Box>
       <Dialog
-         PaperProps={{
+        PaperProps={{
           sx: {
-            width: '600px',        
-            height: '200px',        
-            maxWidth: 'none',       
+            width: "600px",
+            height: "200px",
+            maxWidth: "none",
           },
         }}
         open={open}

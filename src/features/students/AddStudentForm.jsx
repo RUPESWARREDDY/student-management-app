@@ -40,7 +40,7 @@ export default function AddStudentForm() {
         display: "flex",
         gap: 2,
         mb: 3,
-        mt:3,
+        mt: 3,
         width: "100%",
         justifyContent: { xs: "center", sm: "center", md: "space-evenly" },
       }}

@@ -32,15 +32,16 @@ export default function StudentDetails() {
 
   return (
     <Box>
-      
-        <Button variant="text" color="primary" onClick={() => navigate("/dashboard")}>
-        <IconButton  size="sm" >
+      <Button
+        variant="text"
+        color="primary"
+        onClick={() => navigate("/dashboard")}
+      >
+        <IconButton size="sm">
           <ArrowBackIcon />
         </IconButton>
-        <Typography variant="body1">
-          Back
-        </Typography>
-        </Button>
+        <Typography variant="body1">Back</Typography>
+      </Button>
 
       <Card
         sx={{
@@ -53,11 +54,19 @@ export default function StudentDetails() {
           color: "black",
         }}
       >
-        {image && (
+        {image ? (
           <CardMedia
             component="img"
             height="250"
             image={image}
+            alt={name}
+            sx={{ objectFit: "cover" }}
+          />
+        ) : (
+          <CardMedia
+            component="img"
+            height="250"
+            image="https://picsum.photos/200"
             alt={name}
             sx={{ objectFit: "cover" }}
           />
@@ -68,9 +77,13 @@ export default function StudentDetails() {
           </Typography>
           <Typography variant="body1">Age: {age}</Typography>
           <Typography variant="body1">Grade: {grade}</Typography>
-          {description && (
+          {description ? (
             <Typography variant="body2" mt={2}>
               {description}
+            </Typography>
+          ) : (
+            <Typography variant="body2" mt={2}>
+              Aspires to grow in a creative tech environment.
             </Typography>
           )}
         </CardContent>

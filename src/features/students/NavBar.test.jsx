@@ -4,7 +4,6 @@ import { MemoryRouter, useNavigate } from "react-router-dom";
 import NavBar from "./NavBar";
 import { toast } from "react-toastify";
 
-// Mock useNavigate and toast
 vi.mock("react-router-dom", async () => {
   const actual = await vi.importActual("react-router-dom");
   return {
@@ -37,7 +36,9 @@ describe("NavBar Component", () => {
 
     expect(screen.getByText("Student Management System")).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /logout/i })).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: /switch to dark mode/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole("button", { name: /switch to dark mode/i })
+    ).toBeInTheDocument();
   });
 
   it("calls toggleTheme when theme icon is clicked", () => {
@@ -55,7 +56,7 @@ describe("NavBar Component", () => {
   });
 
   it("handles logout correctly", () => {
-    localStorage.setItem("token", "123456"); // Ensure token exists
+    localStorage.setItem("token", "123456");
 
     render(
       <MemoryRouter>

@@ -1,14 +1,6 @@
-import {
-  fetchStudents,
-  addStudent,
-  deleteStudent,
-} from "./studentSlice";
+import { fetchStudents, addStudent, deleteStudent } from "./studentSlice";
 
-import {
-  getStudents,
-  createStudent,
-  removeStudent,
-} from "../apiConfig";
+import { getStudents, createStudent, removeStudent } from "../apiConfig";
 import { describe, it, expect, vi } from "vitest";
 
 vi.mock("../apiConfig.js", () => ({

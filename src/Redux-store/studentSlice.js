@@ -1,9 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import {
-  getStudents,
-  createStudent,
-  removeStudent,
-} from "../apiConfig";
+import { getStudents, createStudent, removeStudent } from "../apiConfig";
 
 export const fetchStudents = createAsyncThunk("students/fetch", async () => {
   const res = await getStudents();

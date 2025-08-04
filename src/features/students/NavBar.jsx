@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Typography,
-  Button,
-  Box,
-  IconButton,
-  Tooltip,
-} from "@mui/material";
+import { Typography, Button, Box, IconButton, Tooltip } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import LightModeIcon from "@mui/icons-material/LightMode";
@@ -35,7 +29,11 @@ function NavBar({ toggleTheme, mode }) {
     >
       <Typography variant="h6">Student Management System</Typography>
       <Box display="flex" alignItems="center" gap={1}>
-        <Tooltip title={mode === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}>
+        <Tooltip
+          title={
+            mode === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"
+          }
+        >
           <IconButton onClick={toggleTheme} color="inherit">
             {mode === "light" ? <DarkModeIcon /> : <LightModeIcon />}
           </IconButton>
