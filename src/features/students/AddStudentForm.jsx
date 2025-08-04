@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import { useForm, Controller } from "react-hook-form";
 import { useDispatch } from "react-redux";
-import { addStudent } from "./studentSlice";
+import { addStudent } from "../../Redux-store/studentSlice";
 import { toast } from "react-toastify";
 
 const grades = ["A", "B", "C"];
@@ -40,6 +40,7 @@ export default function AddStudentForm() {
         display: "flex",
         gap: 2,
         mb: 3,
+        mt:3,
         width: "100%",
         justifyContent: { xs: "center", sm: "center", md: "space-evenly" },
       }}

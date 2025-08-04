@@ -6,7 +6,7 @@ export default function Layout({ children, toggleTheme, mode }) {
   return (
     <>
       <NavBar toggleTheme={toggleTheme} mode={mode} />
-      <Box component="main" sx={{ p: 3 }}>
+      <Box component="main" >
         {children}
       </Box>
     </>

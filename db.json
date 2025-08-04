@@ -1,25 +1,47 @@
 {
   "students": [
     {
-      "id": "dcdc",
-      "name": "Rupeswar Reddy Goddeti",
-      "age": 12,
-      "grade": "B"
-    },
-    {
-      "id": "286e",
-      "name": "Alice",
-      "age": 10,
-      "grade": "A"
-    },
-    {
-      "id": "b3ac",
+      "id": "e9d7",
       "name": "pavan",
       "age": 25,
-      "grade": "A"
+      "grade": "A",
+      "image": "https://randomuser.me/api/portraits/men/1.jpg",
+      "description": "An enthusiastic learner with a passion for technology."
     },
     {
-      "id": "6633",
+      "id": "2492",
+      "name": "Rupeswarreddy Goddeti",
+      "age": 25,
+      "grade": "A",
+      "image": "https://randomuser.me/api/portraits/men/2.jpg",
+      "description": "Dedicated and hardworking student with leadership qualities."
+    },
+    {
+      "id": "4745",
+      "name": "sana",
+      "age": 24,
+      "grade": "B",
+      "image": "https://randomuser.me/api/portraits/women/3.jpg",
+      "description": "Creative thinker with a strong interest in design."
+    },
+    {
+      "id": "745d",
+      "name": "yaswanth",
+      "age": 25,
+      "grade": "C",
+      "image": "https://randomuser.me/api/portraits/men/5.jpg",
+      "description": "Improving steadily with a focus on problem-solving."
+    },
+    {
+      "id": "ff4a",
+      "name": "ramu",
+      "age": 25,
+      "grade": "B",
+      "image": "https://randomuser.me/api/portraits/men/6.jpg",
+      "description": "Reliable team player with good communication skills."
+    },
+    {
+      "id": "9a92",
       "name": "Alice",
       "age": 10,
       "grade": "A"

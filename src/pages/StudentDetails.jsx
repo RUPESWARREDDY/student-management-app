@@ -32,15 +32,15 @@ export default function StudentDetails() {
 
   return (
     <Box>
-      <Box display="flex" alignItems="center" mb={2}>
-        <IconButton onClick={() => navigate("/dashboard")}>
+      
+        <Button variant="text" color="primary" onClick={() => navigate("/dashboard")}>
+        <IconButton  size="sm" >
           <ArrowBackIcon />
-          <Typography variant="h6" ml={1}>
+        </IconButton>
+        <Typography variant="body1">
           Back
         </Typography>
-        </IconButton>
-       
-      </Box>
+        </Button>
 
       <Card
         sx={{
@@ -49,6 +49,8 @@ export default function StudentDetails() {
           boxShadow: 4,
           borderRadius: 3,
           overflow: "hidden",
+          backgroundColor: "white",
+          color: "black",
         }}
       >
         {image && (

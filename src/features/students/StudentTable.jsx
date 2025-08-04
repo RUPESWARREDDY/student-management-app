@@ -3,7 +3,7 @@ import { Box, Button } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { DataGrid } from "@mui/x-data-grid";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchStudents, deleteStudent } from "./studentSlice";
+import { fetchStudents, deleteStudent } from "../../Redux-store/studentSlice";
 import {
   Dialog,
   DialogActions,
@@ -11,13 +11,14 @@ import {
   DialogContentText,
   DialogTitle,
 } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 export default function StudentTable({ filterGrade }) {
   const [open, setOpen] =useState(false);
   const [selectedStudentId, setSelectedStudentId] =useState(null);
   const [selectedStudentName, setSelectedStudentName] =useState("");
   const dispatch = useDispatch();
   const students = useSelector((state) => state.students.list);
-
+  const navigate = useNavigate();
   useEffect(() => {
     dispatch(fetchStudents());
   }, [dispatch]);
@@ -28,7 +29,16 @@ export default function StudentTable({ filterGrade }) {
       : students.filter((s) => s.grade === filterGrade);
 
   const columns = [
-    { field: "name", headerName: "Name", width: 550 },
+    { field: "name", headerName: "Name", width: 550,
+      renderCell: (params) => (
+        <Button
+          variant="text"
+          onClick={() => navigate(`/students/${params.row.id}`, { state: params.row })}
+        >
+          {params.row.name}
+        </Button>
+      ),
+     },
     { field: "age", headerName: "Age", width: 200 },
     { field: "grade", headerName: "Grade", width: 200 },
     {

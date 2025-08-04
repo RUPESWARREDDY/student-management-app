@@ -2,16 +2,16 @@ import {
   fetchStudents,
   addStudent,
   deleteStudent,
-} from "../../features/students/studentSlice";
+} from "./studentSlice";
 
 import {
   getStudents,
   createStudent,
   removeStudent,
-} from "../../api/studentApi";
+} from "../apiConfig";
 import { describe, it, expect, vi } from "vitest";
 
-vi.mock("../../api/studentApi", () => ({
+vi.mock("../apiConfig.js", () => ({
   getStudents: vi.fn(),
   createStudent: vi.fn(),
   removeStudent: vi.fn(),
