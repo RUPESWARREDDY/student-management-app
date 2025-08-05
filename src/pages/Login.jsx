@@ -19,7 +19,7 @@ export default function Login() {
       const res = await axios.get("http://localhost:3000/users");
       const user = res.data.find(
         (user) =>
-          user.username === data.username && user.password === data.password
+          user.email === data.email && user.password === data.password
       );
       if (user) {
         localStorage.setItem("token", res.data.token);
@@ -27,7 +27,7 @@ export default function Login() {
         reset();
         navigate("/dashboard");
       } else {
-        toast.error("Invalid username or password");
+        toast.error("Invalid email or password");
         return;
       }
     } catch (err) {
@@ -41,7 +41,7 @@ export default function Login() {
         <Typography variant="h5">Login</Typography>
         <form onSubmit={handleSubmit(onSubmit)}>
           <Controller
-            name="username"
+            name="email"
             control={control}
             rules={{
               required: "Email is required",
