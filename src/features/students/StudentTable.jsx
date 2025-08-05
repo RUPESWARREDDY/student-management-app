@@ -3,7 +3,7 @@ import { Box, Button } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { DataGrid } from "@mui/x-data-grid";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchStudents, deleteStudent } from "../../Redux-store/studentSlice";
+import { fetchStudents, deleteStudent } from "../../reduxstore/studentSlice";
 import {
   Dialog,
   DialogActions,
@@ -32,10 +32,12 @@ export default function StudentTable({ filterGrade }) {
     {
       field: "name",
       headerName: "Name",
-      width: 550,
+      flex: 1,
+      minWidth: 150,
       renderCell: (params) => (
         <Button
           variant="text"
+          color="primary.main"
           onClick={() =>
             navigate(`/students/${params.row.id}`, { state: params.row })
           }
@@ -44,12 +46,13 @@ export default function StudentTable({ filterGrade }) {
         </Button>
       ),
     },
-    { field: "age", headerName: "Age", width: 200 },
-    { field: "grade", headerName: "Grade", width: 200 },
+    { field: "age", headerName: "Age", flex: 0.5, minWidth: 100 },
+    { field: "grade", headerName: "Grade", flex: 0.5, minWidth: 100 },
     {
       field: "actions",
       headerName: "Actions",
-      width: 200,
+      flex: 0.7,
+      minWidth: 120,
       renderCell: (params) => (
         <>
           <Button
@@ -70,7 +73,13 @@ export default function StudentTable({ filterGrade }) {
 
   return (
     <>
-      <Box sx={{ height: 400, width: "100%" }}>
+      <Box
+        sx={{
+          width: "100%",
+          px: { xs: 1, sm: 2, md: 3, lg: 4 },
+          py: { xs: 1, sm: 2 },
+        }}
+      >
         <DataGrid
           rows={filtered}
           columns={columns}

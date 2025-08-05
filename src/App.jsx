@@ -26,6 +26,9 @@ export default function App() {
                 text: {
                   primary: "#ffffff",
                 },
+                primary: {
+                  main: "#1d1d1d",
+                },
               }
             : {
                 background: {
@@ -36,7 +39,7 @@ export default function App() {
                   primary: "#000000",
                 },
                 primary: {
-                  main: '#1976d2', 
+                  main: "#1976d2",
                 },
               }),
         },
@@ -67,9 +70,11 @@ export default function App() {
           <Route
             path="/students/:id"
             element={
-              <Layout toggleTheme={toggleTheme} mode={mode}>
-                <StudentDetails />
-              </Layout>
+              <PrivateRoute>
+                <Layout toggleTheme={toggleTheme} mode={mode}>
+                  <StudentDetails />
+                </Layout>
+              </PrivateRoute>
             }
           />
         </Routes>

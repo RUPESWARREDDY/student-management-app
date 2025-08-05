@@ -6,7 +6,6 @@ import {
   Typography,
   Button,
   Box,
-  IconButton,
   CardMedia,
 } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
@@ -17,7 +16,7 @@ export default function StudentDetails() {
 
   if (!state) {
     return (
-      <Box p={3}>
+      <Box p={3} textAlign="center">
         <Typography variant="h6">
           No student data found. Please go back to the student list.
         </Typography>
@@ -31,27 +30,39 @@ export default function StudentDetails() {
   const { name, age, grade, image, description } = state;
 
   return (
-    <Box>
+    <Box
+      sx={{
+        px: { xs: 2, sm: 4, md: 6 },
+        py: { xs: 3, sm: 4 },
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        minHeight: "100vh",
+        bgcolor: "background.default",
+      }}
+    >
       <Button
         variant="text"
-        color="primary"
+        color="background.default"
         onClick={() => navigate("/dashboard")}
+        sx={{ alignSelf: "flex-start", mb: 2 }}
       >
-        <IconButton size="sm">
-          <ArrowBackIcon />
-        </IconButton>
+        <ArrowBackIcon />
         <Typography variant="body1">Back</Typography>
       </Button>
 
       <Card
         sx={{
-          maxWidth: 300,
-          mx: "auto",
+          width: {
+            xs: "100%",
+            sm: "400px",
+            md: "450px",
+          },
           boxShadow: 4,
           borderRadius: 3,
           overflow: "hidden",
-          backgroundColor: "white",
-          color: "black",
+          backgroundColor: "background.paper",
+          color: "primary",
           textAlign: "center",
         }}
       >
@@ -66,14 +77,14 @@ export default function StudentDetails() {
               height: "100px",
               objectFit: "cover",
               borderRadius: "50%",
-              mx: "auto", 
-              mt: 2,
+              mx: "auto",
+              mt: 3,
             }}
           />
         ) : (
           <CardMedia
             component="img"
-            height="250"
+            height="100px"
             image="https://picsum.photos/200"
             alt={name}
             sx={{
@@ -81,7 +92,7 @@ export default function StudentDetails() {
               height: "100px",
               objectFit: "cover",
               borderRadius: "50%",
-              mx: "auto", 
+              mx: "auto",
               mt: 2,
             }}
           />
@@ -92,13 +103,9 @@ export default function StudentDetails() {
           </Typography>
           <Typography variant="body1">Age: {age}</Typography>
           <Typography variant="body1">Grade: {grade}</Typography>
-          {description ? (
+          {description ?? (
             <Typography variant="body2" mt={2}>
-              {description}
-            </Typography>
-          ) : (
-            <Typography variant="body2" mt={2}>
-              Aspires to grow in a creative tech environment.
+              {description ?? "Aspires to grow in a creative tech environment"}
             </Typography>
           )}
         </CardContent>

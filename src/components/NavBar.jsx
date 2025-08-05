@@ -22,12 +22,29 @@ function NavBar({ toggleTheme, mode }) {
         alignItems: "center",
         bgcolor: "primary.main",
         color: "white",
-        height: "60px",
+        height: { xs: "auto", sm: "60px" },
         px: 2,
+        py: {
+          xs: 1,
+          sm: 1,
+          md: 0,
+        },
         boxShadow: 1,
+        gap: { xs: 1, sm: 0 },
       }}
     >
-      <Typography variant="h6">Student Management System</Typography>
+      <Typography
+        variant="h6"
+        sx={{
+          fontSize: {
+            xs: "18px",
+            sm: "18px",
+            md: "20px",
+          },
+        }}
+      >
+        Student Management System
+      </Typography>
       <Box display="flex" alignItems="center" gap={1}>
         <Tooltip
           title={

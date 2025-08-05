@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import { useForm, Controller } from "react-hook-form";
 import { useDispatch } from "react-redux";
-import { addStudent } from "../../Redux-store/studentSlice";
+import { addStudent } from "../../reduxstore/studentSlice";
 import { toast } from "react-toastify";
 
 const grades = ["A", "B", "C"];
@@ -38,11 +38,23 @@ export default function AddStudentForm() {
       onSubmit={handleSubmit(onSubmit)}
       sx={{
         display: "flex",
+        flexDirection: {
+          xs: "column",
+          sm: "row",
+          md: "row",
+        },
         gap: 2,
         mb: 3,
         mt: 3,
+        p: {
+          xs: 2,
+          sm: 2,
+          md: 3,
+          lg: 3,
+        },
         width: "100%",
         justifyContent: { xs: "center", sm: "center", md: "space-evenly" },
+        alignContent: "space-around",
       }}
     >
       <Controller
@@ -96,7 +108,16 @@ export default function AddStudentForm() {
           </FormControl>
         )}
       />
-      <Button type="submit" variant="contained">
+      <Button
+        type="submit"
+        variant="contained"
+        sx={{
+          width: {
+            xs: "100%",
+            sm: "auto",
+          },
+        }}
+      >
         Add
       </Button>
     </Box>

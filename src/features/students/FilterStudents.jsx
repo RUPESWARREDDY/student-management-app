@@ -7,7 +7,24 @@ export default function FilterStudents() {
 
   return (
     <>
-      <Box sx={{ display: "flex", justifyContent: "flex-end", mb: 2 }}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: {
+            xs: "center",
+            sm: "flex-end",
+            md: "flex-end",
+            lg: "flex-end",
+          },
+          mb: 2,
+          px: {
+            xs: 2,
+            sm: 2,
+            md: 3,
+            lg: 4,
+          },
+        }}
+      >
         <FormControl sx={{ minWidth: 200 }}>
           <InputLabel>Filter by Grade</InputLabel>
           <Select

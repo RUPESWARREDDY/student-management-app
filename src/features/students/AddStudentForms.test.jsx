@@ -2,7 +2,7 @@
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
-import studentReducer from "../../Redux-store/studentSlice";
+import studentReducer from "../../reduxstore/studentSlice";
 import AddStudentForm from "./AddStudentForm";
 import React from "react";
 

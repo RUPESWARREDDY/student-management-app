@@ -4,7 +4,7 @@ import StudentTable from "./StudentTable";
 import { Provider } from "react-redux";
 import { MemoryRouter } from "react-router-dom";
 import { configureStore } from "@reduxjs/toolkit";
-import studentsReducer from "../../Redux-store/studentSlice";
+import studentsReducer from "../../reduxstore/studentSlice";
 import { vi } from "vitest";
 
 vi.mock("../../apiConfig.js", () => ({
