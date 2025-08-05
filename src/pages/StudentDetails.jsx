@@ -45,22 +45,30 @@ export default function StudentDetails() {
 
       <Card
         sx={{
-          maxWidth: 500,
+          maxWidth: 300,
           mx: "auto",
           boxShadow: 4,
           borderRadius: 3,
           overflow: "hidden",
           backgroundColor: "white",
           color: "black",
+          textAlign: "center",
         }}
       >
         {image ? (
           <CardMedia
             component="img"
-            height="250"
+            height="100px"
             image={image}
             alt={name}
-            sx={{ objectFit: "cover" }}
+            sx={{
+              width: "100px",
+              height: "100px",
+              objectFit: "cover",
+              borderRadius: "50%",
+              mx: "auto", 
+              mt: 2,
+            }}
           />
         ) : (
           <CardMedia
@@ -68,7 +76,14 @@ export default function StudentDetails() {
             height="250"
             image="https://picsum.photos/200"
             alt={name}
-            sx={{ objectFit: "cover" }}
+            sx={{
+              width: "100px",
+              height: "100px",
+              objectFit: "cover",
+              borderRadius: "50%",
+              mx: "auto", 
+              mt: 2,
+            }}
           />
         )}
         <CardContent>
