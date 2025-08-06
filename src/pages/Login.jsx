@@ -45,6 +45,7 @@ export default function Login() {
             py: { xs: 4, sm: 6 },
             boxShadow: 3,
             borderRadius: 2,
+            backgroundColor: "background.paper",
           }}
         >
           <Typography variant="h5">Login</Typography>
