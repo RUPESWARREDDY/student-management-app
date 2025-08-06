@@ -1,22 +1,21 @@
-import React from "react";
 import { render, screen } from "@testing-library/react";
+import Dashboard from "./Dashboard";
 import { describe, it, expect, vi } from "vitest";
 
+// Mock child components
 vi.mock("../features/students/AddStudentForm", () => ({
-  default: () => <div>MockAddStudentForm</div>,
+  default: () => <div data-testid="add-student-form">AddStudentForm</div>,
 }));
 
-vi.mock("../features/students/FilterStudents", () => ({
-  default: () => <div>MockFilterStudents</div>,
+vi.mock("../features/students/StudentTable", () => ({
+  default: () => <div data-testid="student-table">StudentTable</div>,
 }));
-
-import Dashboard from "./Dashboard";
 
 describe("Dashboard Component", () => {
-  it("renders AddStudentForm and FilterStudents", () => {
+  it("should render AddStudentForm and StudentTable", () => {
     render(<Dashboard />);
 
-    expect(screen.getByText("MockAddStudentForm")).toBeInTheDocument();
-    expect(screen.getByText("MockFilterStudents")).toBeInTheDocument();
+    expect(screen.getByTestId("add-student-form")).toBeInTheDocument();
+    expect(screen.getByTestId("student-table")).toBeInTheDocument();
   });
 });

@@ -1,14 +1,14 @@
 import React from "react";
 import { Container, Box } from "@mui/material";
-import FilterStudents from "../features/students/FilterStudents";
 import AddStudentForm from "../features/students/AddStudentForm";
+import StudentTable from "../features/students/StudentTable";
 
 export default function Dashboard() {
   return (
     <Box>
       <Container maxWidth="lg" disableGutters>
         <AddStudentForm />
-        <FilterStudents />
+        <StudentTable />
       </Container>
     </Box>
   );
