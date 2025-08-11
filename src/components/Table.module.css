@@ -1,0 +1,70 @@
+.tableSection {
+  border-bottom: 1px solid gray;
+  padding-bottom: 16px;
+  margin-top: 16px;
+}
+
+.toggleRow {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  gap: 8px;
+}
+
+.toggleRow p {
+  font-size: 1rem;
+}
+
+.dataGridContainer {
+  height: 400px;
+  overflow: hidden;
+}
+
+/* For tablets */
+@media (max-width: 1024px) {
+  .dataGridContainer {
+    height: 350px;
+  }
+}
+
+/* For small tablets */
+@media (max-width: 768px) {
+  .toggleRow p {
+    font-size: 0.9rem;
+  }
+  .dataGridContainer {
+    height: auto;
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  .toggleRow {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .toggleRow p {
+    font-size: 0.85rem;
+  }
+
+  .dataGridContainer {
+    height: auto;
+    overflow-x: auto;
+  }
+
+  .dataGridContainer .MuiDataGrid-root {
+    min-width: 600px;
+  }
+
+  .dataGridContainer::-webkit-scrollbar {
+    height: 6px;
+  }
+  .dataGridContainer::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+  }
+}

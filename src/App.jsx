@@ -5,6 +5,7 @@ import Dashboard from "./pages/Dashboard";
 import StudentDetails from "./pages/StudentDetails";
 import PrivateRoute from "./components/PrivateRoute";
 import Layout from "./components/Layout";
+import Devices from "./pages/Devices";
 import { ToastContainer } from "react-toastify";
 import { ThemeProvider, createTheme, CssBaseline } from "@mui/material";
 import "react-toastify/dist/ReactToastify.css";
@@ -63,6 +64,16 @@ export default function App() {
               <PrivateRoute>
                 <Layout toggleTheme={toggleTheme} mode={mode}>
                   <Dashboard />
+                </Layout>
+              </PrivateRoute>
+            }
+          />
+           <Route
+            path="/devices"
+            element={
+              <PrivateRoute>
+                <Layout toggleTheme={toggleTheme} mode={mode}>
+                  <Devices />
                 </Layout>
               </PrivateRoute>
             }

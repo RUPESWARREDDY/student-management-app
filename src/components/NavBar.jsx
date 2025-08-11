@@ -1,12 +1,25 @@
 import React from "react";
-import { Typography, Button, Box, IconButton, Tooltip } from "@mui/material";
-import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  IconButton,
+  Box,
+  InputBase,
+  Tooltip,
+} from "@mui/material";
+import { Link as RouterLink, useLocation, useNavigate } from "react-router-dom";
+import Link from "@mui/material/Link";
+import SearchIcon from "@mui/icons-material/Search";
+import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
+import { toast } from "react-toastify";
+import styles from "./NavBar.module.css"; // ✅ Import CSS Module
 
-function NavBar({ toggleTheme, mode }) {
+export default function NavBar({ toggleTheme, mode }) {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleLogout = () => {
     localStorage.removeItem("token");
@@ -15,57 +28,79 @@ function NavBar({ toggleTheme, mode }) {
   };
 
   return (
-    <Box
-      sx={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        bgcolor: "primary.main",
-        color: "white",
-        height: { xs: "auto", sm: "60px" },
-        px: 2,
-        py: {
-          xs: 1,
-          sm: 1,
-          md: 0,
-        },
-        boxShadow: 1,
-        gap: { xs: 1, sm: 0 },
-      }}
-    >
-      <Typography
-        variant="h6"
-        sx={{
-          fontSize: {
-            xs: "18px",
-            sm: "18px",
-            md: "20px",
-          },
-        }}
+    <Box className={styles["navbar-root"]}>
+      <AppBar
+        position="static"
+        elevation={0}
+        className={styles["navbar-appbar"]}
       >
-        Student Management System
-      </Typography>
-      <Box display="flex" alignItems="center" gap={1}>
-        <Tooltip
-          title={
-            mode === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"
-          }
-        >
-          <IconButton onClick={toggleTheme} color="inherit">
-            {mode === "light" ? <DarkModeIcon /> : <LightModeIcon />}
-          </IconButton>
-        </Tooltip>
-        <Button
-          variant="contained"
-          color="error"
-          onClick={handleLogout}
-          size="small"
-        >
-          Logout
-        </Button>
-      </Box>
+        <Toolbar className={styles["navbar-toolbar"]}>
+          <Box className={styles["navbar-brand"]}>
+            <Typography variant="h5">
+              EQUINOX <span className={styles.logo}>| PHOTON</span>
+            </Typography>
+          </Box>
+
+          <Box className={styles["navbar-search"]}>
+            <SearchIcon
+              fontSize="small"
+              style={{ color: "#999", marginRight: 8 }}
+            />
+            <InputBase
+              placeholder="Search anything or add bookmarks"
+              className={styles["navbar-search-input"]}
+            />
+          </Box>
+
+          <Box className={styles["navbar-links"]}>
+            <Link
+              component={RouterLink}
+              to="/dashboard"
+              className={`${styles["navbar-link"]} ${
+                location.pathname === "/dashboard" ? styles["active"] : ""
+              }`}
+            >
+              Dashboard
+            </Link>
+
+            <Link
+              component={RouterLink}
+              to="/devices"
+              className={`${styles["navbar-link"]} ${
+                location.pathname === "/devices" ? styles["active"] : ""
+              }`}
+            >
+              Devices
+            </Link>
+
+            <Link
+              component={RouterLink}
+              to="/software"
+              className={`${styles["navbar-link"]} ${
+                location.pathname === "/software" ? styles["active"] : ""
+              }`}
+            >
+              Software
+            </Link>
+
+            <Tooltip
+              title={
+                mode === "light"
+                  ? "Switch to Dark Mode"
+                  : "Switch to Light Mode"
+              }
+            >
+              <IconButton onClick={toggleTheme} color="inherit">
+                {mode === "light" ? <DarkModeIcon /> : <LightModeIcon />}
+              </IconButton>
+            </Tooltip>
+
+            <IconButton onClick={handleLogout} sx={{ color: "#fff" }}>
+              <LogoutOutlinedIcon />
+            </IconButton>
+          </Box>
+        </Toolbar>
+      </AppBar>
     </Box>
   );
 }
-
-export default NavBar;

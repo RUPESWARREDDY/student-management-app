@@ -1,0 +1,24 @@
+.carouselContainer {
+  background-color: #575555;
+  color: #fff;
+}
+
+.carousel-item {
+  padding: 0 20px;
+}
+.cardsWrapper{
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #f3ecec !important;
+    color: #ffff;
+    padding: 48px 48px;
+    width: 100%;
+  min-height: 300px;
+
+  
+}
+.carouselItem{
+  margin-right: 25px !important;
+}

@@ -1,0 +1,63 @@
+.navbar-root {
+    background-color: #000;
+    color: #fff;
+    padding: 8px 32px;
+  }
+  
+  .navbar-appbar {
+    background-color: #000 !important;
+  }
+  .logo{
+    color: grey;
+  }
+  
+  .navbar-toolbar {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .navbar-search {
+    border-bottom: 1px solid #888;
+    display: flex;
+    align-items: center;
+    max-width: 300px;
+    width: 100%;
+    margin: 8px 0;
+  }
+  
+  .navbar-search-input {
+    color: #fff !important;
+    font-size: 0.85rem;
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+  
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  
+  .navbar-link {
+    font-size: 20px;
+    text-decoration: none !important;
+    color:white ! important;
+    transition: color 0.3s;
+  }
+  
+  .active {
+    color: white ! important;
+    font-weight: 700 ! important;
+  }
+  

@@ -47,6 +47,153 @@
       "grade": "B"
     }
   ],
+  "outoforder": [
+    {
+      "id": "1",
+      "name": "Treadmill - Soul Cycle",
+      "quantity": 5,
+      "status": "Out of order",
+      "reason": "Exceeded the lifetime mileage",
+      "maintenance": "In progress",
+      "image": "/src/assets/threadmill.png"
+    },
+    {
+      "id": "2",
+      "name": "Studio Cycle",
+      "quantity": 1,
+      "status": "Out of order",
+      "reason": "Power supply problem",
+      "maintenance": "In progress",
+      "image": "/src/assets/threadmill.png"
+    },
+    {
+      "id": "3",
+      "name": " Cycling",
+      "quantity": 5,
+      "status": "Out of order",
+      "reason": "lifetime mileage",
+      "maintenance": "In progress",
+      "image": "/src/assets/threadmill.png"
+    },
+    {
+      "id": "4",
+      "name": "Dumbbells - 5kg",
+      "quantity": 5,
+      "status": "Out of order",
+      "reason": "Improve musile strength",
+      "maintenance": "In progress",
+      "image": "/src/assets/threadmill.png"
+    },
+    {
+      "id": "5",
+      "name": "Dumbbells - 10kg",
+      "quantity": 5,
+      "status": "Out of order",
+      "reason": "Improve musile strength",
+      "maintenance": "In progress",
+      "image": "/src/assets/threadmill.png"
+    }
+  ],
+  "fitnessdevices": [
+    {
+      "id": "1",
+      "deviceName": "Life Fitness",
+      "deviceType": "Treadmill",
+      "serialNumber": "E1126200543",
+      "facility": "Woodland Hills",
+      "lastActivityOn": "28 Apr 2024 | 12:38 PM",
+      "equipmentStatus": "Active",
+      "powerMeterStatus": "Up to date"
+    },
+    {
+      "id": "2",
+      "deviceName": "Precor",
+      "deviceType": "Elliptical",
+      "serialNumber": "P3347209871",
+      "facility": "Santa Monica",
+      "lastActivityOn": "05 Aug 2024 | 09:15 AM",
+      "equipmentStatus": "Inactive",
+      "powerMeterStatus": "Needs update"
+    },
+    {
+      "id": "3",
+      "deviceName": "Technogym",
+      "deviceType": "Stationary Bike",
+      "serialNumber": "T9981124537",
+      "facility": "Downtown LA",
+      "lastActivityOn": "30 Jul 2024 | 06:42 PM",
+      "equipmentStatus": "Active",
+      "powerMeterStatus": "Up to date"
+    }
+  ],
+  "itAssets": [
+    {
+      "id": "1",
+      "deviceName": "WASP 1",
+      "macId": "10:9B:8C:7D:6E:5F",
+      "ipAddress": "192.168.0.2",
+      "facility": "Woodland Hills",
+      "lastActivity": "28 Apr 2024 | 12:38 PM",
+      "connectedDevices": 12,
+      "greengrassVersion": "-",
+      "status": "Up to date"
+    },
+    {
+      "id": "2",
+      "deviceName": "WASP 2",
+      "macId": "00:1A:2B:3C:4D:5E",
+      "ipAddress": "192.168.1.2",
+      "facility": "Woodland Hills",
+      "lastActivity": "28 Apr 2024 | 12:38 PM",
+      "connectedDevices": 12,
+      "greengrassVersion": "-",
+      "status": "Up to date"
+    },
+    {
+      "id": "3",
+      "deviceName": "WASP 3",
+      "macId": "20:1B:3C:4D:5E:6F",
+      "ipAddress": "10.0.0.2",
+      "facility": "Woodland Hills",
+      "lastActivity": "28 Apr 2024 | 12:38 PM",
+      "connectedDevices": 12,
+      "greengrassVersion": "-",
+      "status": "Up to date"
+    },
+    {
+      "id": "4",
+      "deviceName": "WASP 4",
+      "macId": "30:2A:1B:3C:4D:5E",
+      "ipAddress": "10.1.1.2",
+      "facility": "Woodland Hills",
+      "lastActivity": "28 Apr 2024 | 12:38 PM",
+      "connectedDevices": 12,
+      "greengrassVersion": "-",
+      "status": "Up to date"
+    },
+    {
+      "id": "5",
+      "deviceName": "WASP 5",
+      "macId": "40:3A:2B:1C:3D:5E",
+      "ipAddress": "172.16.0.2",
+      "facility": "Woodland Hills",
+      "lastActivity": "28 Apr 2024 | 12:38 PM",
+      "connectedDevices": 12,
+      "greengrassVersion": "-",
+      "status": "Up to date"
+    },
+    {
+      "id": "6",
+      "deviceName": "Server 1",
+      "macId": "50:4B:3C:2D:1E:0F",
+      "ipAddress": "192.168.0.10",
+      "facility": "Woodland Hills",
+      "lastActivity": "28 Apr 2024 | 12:38 PM",
+      "connectedDevices": "-",
+      "greengrassVersion": "2.12.4",
+      "status": "Up to date"
+    }
+  ],
   "users": [
     {
       "id": "1",

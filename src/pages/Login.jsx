@@ -4,7 +4,7 @@ import { useForm, Controller } from "react-hook-form";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import { EMAIL_REGEX, PASSWORD_REGEX } from "../constants";
+import { EMAIL_REGEX, PASSWORD_REGEX } from "../constants/regex";
 export default function Login() {
   const { control, handleSubmit, reset } = useForm();
   const navigate = useNavigate();
@@ -15,7 +15,8 @@ export default function Login() {
         (user) => user.email === data.email && user.password === data.password
       );
       if (user) {
-        localStorage.setItem("token", res.data.token);
+        console.log(res.data?.[0].token)
+        localStorage.setItem("token", res.data?.[0].token);
         toast.success("Login successful!");
         reset();
         navigate("/dashboard");
