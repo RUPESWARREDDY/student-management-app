@@ -13,8 +13,8 @@ vi.mock("../features/equinox/EquipmentCarousel", () => ({
   ),
 }));
 
-vi.mock("../features/equinox/DevicesTable", () => ({
-  default: () => <div data-testid="devices-table">Mock DevicesTable</div>,
+vi.mock("../features/equinox/FilterEquipment", () => ({
+  default: () => <div data-testid="filter-equipment">Mock FilterEquipment</div>,
 }));
 
 import Devices from "./Devices";
@@ -25,17 +25,17 @@ describe("Devices component", () => {
 
     expect(screen.getByTestId("subheader")).toBeInTheDocument();
     expect(screen.getByTestId("equipment-carousel")).toBeInTheDocument();
-    expect(screen.getByTestId("devices-table")).toBeInTheDocument();
+    expect(screen.getByTestId("filter-equipment")).toBeInTheDocument();
   });
 
   it("renders the child components in the correct order", () => {
     render(<Devices />);
 
     const container = screen.getByTestId("devices-container");
-    const children = within(container).getAllByTestId(/subheader|equipment-carousel|devices-table/);
+    const children = within(container).getAllByTestId(/subheader|equipment-carousel|filter-equipment/);
 
     expect(children[0]).toHaveTextContent("Mock SubHeader");
     expect(children[1]).toHaveTextContent("Mock EquipmentCarousel");
-    expect(children[2]).toHaveTextContent("Mock DevicesTable");
+    expect(children[2]).toHaveTextContent("Mock FilterEquipment");
   });
 });

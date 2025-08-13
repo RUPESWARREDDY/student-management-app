@@ -1,9 +1,8 @@
-// Table.test.jsx
+
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { render, screen, fireEvent } from "@testing-library/react";
 import Table from "./Table";
 
-// Mock CSS modules
 vi.mock("./Table.module.css", () => ({
   default: {
     tableSection: "tableSection",
@@ -12,7 +11,6 @@ vi.mock("./Table.module.css", () => ({
   },
 }));
 
-// Mock DataGrid to avoid rendering complexity
 vi.mock("@mui/x-data-grid", () => ({
   DataGrid: (props) => (
     <div data-testid="mock-datagrid">

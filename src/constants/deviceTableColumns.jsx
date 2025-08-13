@@ -55,7 +55,6 @@ function getCurrentDateTime() {
     hour12: true,
   });
 }
-
 export const assetsColumns = [
   { field: "deviceName", headerName: "DEVICE NAME", minWidth: 150, flex: 1 },
   { field: "macId", headerName: "MAC ID", minWidth: 150, flex: 1 },

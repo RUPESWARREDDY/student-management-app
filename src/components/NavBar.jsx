@@ -15,7 +15,7 @@ import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import { toast } from "react-toastify";
-import styles from "./NavBar.module.css"; // ✅ Import CSS Module
+import styles from "./NavBar.module.css";
 
 export default function NavBar({ toggleTheme, mode }) {
   const navigate = useNavigate();

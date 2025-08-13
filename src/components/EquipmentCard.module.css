@@ -64,6 +64,9 @@
     right: 8px;
     color: #aaa !important;
   }
+  .customTooltip{
+    margin-top: 0px !important;
+  }
   @media (max-width: 1024px) {
     .card{ 
      padding: 12px;

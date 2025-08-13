@@ -1,13 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Box, Typography, IconButton } from "@mui/material";
-import FilterAltIcon from "@mui/icons-material/FilterAlt";
-import ViewWeekIcon from "@mui/icons-material/ViewWeek";
-import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
-import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
 import axios from "axios";
 import DeviceTable from "../../components/Table";
 import { fitnessColumns, assetsColumns } from "../../constants/deviceTableColumns";
-import styles from "./DevicesTable.module.css"; 
 
 export default function DevicesTable() {
   const [devices, setDevices] = useState([]);
@@ -35,21 +29,8 @@ export default function DevicesTable() {
   }, []);
 
   return (
-    <Box className={styles.pageWrapper}>
-      <Box className={styles.headerRow}>
-        <Typography variant="h6" gutterBottom color="gray">
-          Filter Equipments
-        </Typography>
-        <Box className={styles.iconRow}>
-          {[FilterAltIcon, ViewWeekIcon, BookmarkBorderIcon, FileDownloadOutlinedIcon].map(
-            (Icon, idx) => (
-              <IconButton key={idx} size="small" className={styles.iconButton}>
-                <Icon />
-              </IconButton>
-            )
-          )}
-        </Box>
-      </Box>
+  <>
+     
 
       <DeviceTable
         title="Fitness Devices"
@@ -75,6 +56,6 @@ export default function DevicesTable() {
           setShowAssets((p) => !p);
         }}
       />
-    </Box>
+    </>
   );
 }

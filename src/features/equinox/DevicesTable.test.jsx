@@ -1,23 +1,12 @@
-// DevicesTable.test.jsx
 import { render, screen, waitFor } from "@testing-library/react";
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import DevicesTable from "./DevicesTable";
 import axios from "axios";
 
-// Mock CSS module
-vi.mock("./DevicesTable.module.css", () => ({
-  default: {
-    pageWrapper: "pageWrapper",
-    headerRow: "headerRow",
-    iconRow: "iconRow",
-    iconButton: "iconButton",
-  },
-}));
-
 // Mock axios
 vi.mock("axios");
 
-// Mock DeviceTable to just render title and count
+
 vi.mock("../../components/Table", () => ({
   default: ({ title, count }) => (
     <div data-testid="device-table">
@@ -40,8 +29,8 @@ describe("DevicesTable", () => {
     const mockAssets = [{ id: 1, name: "Laptop" }];
 
     axios.get
-      .mockResolvedValueOnce({ data: mockDevices }) // fitnessdevices
-      .mockResolvedValueOnce({ data: mockAssets }); // itAssets
+      .mockResolvedValueOnce({ data: mockDevices }) 
+      .mockResolvedValueOnce({ data: mockAssets }); 
 
     render(<DevicesTable />);
 

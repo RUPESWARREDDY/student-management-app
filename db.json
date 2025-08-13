@@ -45,6 +45,12 @@
       "name": "jasmitha reddy",
       "age": 23,
       "grade": "B"
+    },
+    {
+      "id": "33cf",
+      "name": "Alice",
+      "age": 10,
+      "grade": "A"
     }
   ],
   "outoforder": [
@@ -113,7 +119,7 @@
       "facility": "Santa Monica",
       "lastActivityOn": "05 Aug 2024 | 09:15 AM",
       "equipmentStatus": "Inactive",
-      "powerMeterStatus": "Needs update"
+      "powerMeterStatus": "Up to date"
     },
     {
       "id": "3",

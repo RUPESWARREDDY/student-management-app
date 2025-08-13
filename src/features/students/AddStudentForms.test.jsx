@@ -17,21 +17,15 @@ it("dispatches addStudent on form submit", async () => {
       <AddStudentForm />
     </Provider>
   );
-
-  // Type into name
   await userEvent.type(screen.getByLabelText(/name/i), "Alice");
-  // Type into age
   await userEvent.type(screen.getByLabelText(/age/i), "10");
 
-  // Open the select menu
   await userEvent.click(screen.getByRole("combobox"));
-  // Select "A"
   await userEvent.click(await screen.findByRole("option", { name: "A" }));
 
-  // Click submit
+
   await userEvent.click(screen.getByRole("button", { name: /add/i }));
 
-  // Assert that the student was added to the store
   await waitFor(() =>
     expect(store.getState().students.list).toEqual(
       expect.arrayContaining([

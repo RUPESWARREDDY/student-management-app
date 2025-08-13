@@ -1,10 +1,8 @@
-// EquipmentCarousel.test.jsx
 import { render, screen, waitFor } from "@testing-library/react";
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import EquipmentCarousel from "./EquipmentCarousel";
 import axios from "axios";
 
-// Mock CSS modules
 vi.mock("./EquipmentCarousel.module.css", () => ({
   default: { carouselItem: "carouselItem" },
 }));
@@ -12,14 +10,12 @@ vi.mock("./EquipmentCarousel.module.css", () => ({
 // Mock axios
 vi.mock("axios");
 
-// Mock EquipmentCard
 vi.mock("../../components/EquipmentCard", () => ({
   default: ({ equipment }) => (
     <div data-testid="equipment-card">{equipment.name}</div>
   ),
 }));
 
-// Mock react-multi-carousel to render children directly
 vi.mock("react-multi-carousel", () => ({
   __esModule: true,
   default: ({ children }) => <div>{children}</div>,

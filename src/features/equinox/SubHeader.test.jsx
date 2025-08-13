@@ -17,7 +17,6 @@ vi.mock("./SubHeader.module.css", () => ({
 describe("SubHeader component", () => {
   it("renders the Equipment title", () => {
     render(<SubHeader />);
-    // Only check the heading element, not the button text
     const heading = screen.getByRole("heading", { name: "Equipment" });
     expect(heading).toBeInTheDocument();
   });
@@ -45,7 +44,7 @@ describe("SubHeader component", () => {
   it("renders both icons", () => {
     const { container } = render(<SubHeader />);
     const svgs = container.querySelectorAll("svg");
-    expect(svgs.length).toBeGreaterThanOrEqual(2); // back arrow + search icon
+    expect(svgs.length).toBeGreaterThanOrEqual(2); 
   });
 
   it("renders icons using data-testid", () => {
