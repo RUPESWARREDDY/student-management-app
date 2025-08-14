@@ -15,10 +15,9 @@
     color: #ffff;
     padding: 48px 48px;
     width: 100%;
-  min-height: 300px;
-
-  
+    min-height: 300px;
 }
 .carouselItem{
-  margin-right: 25px !important;
+  margin-right: 10px !important;
+  width: 400px !important;
 }

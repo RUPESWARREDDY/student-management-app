@@ -7,7 +7,7 @@ export default function DevicesTable() {
   const [devices, setDevices] = useState([]);
   const [assets, setAssets] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [showDevices, setShowDevices] = useState(true);
+  const [showDevices, setShowDevices] = useState(false);
   const [showAssets, setShowAssets] = useState(false);
 
   useEffect(() => {
@@ -41,7 +41,6 @@ export default function DevicesTable() {
         expanded={showDevices}
         onToggle={() => {
           setShowDevices((p) => !p);
-          setShowAssets((p) => !p);
         }}
       />
       <DeviceTable
@@ -52,7 +51,6 @@ export default function DevicesTable() {
         loading={loading}
         expanded={showAssets}
         onToggle={() => {
-          setShowDevices((p) => !p);
           setShowAssets((p) => !p);
         }}
       />

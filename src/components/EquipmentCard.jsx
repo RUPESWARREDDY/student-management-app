@@ -39,7 +39,7 @@ const EquipmentCard = ({ equipment }) => {
             <Typography variant="caption" className={styles.status}>
               {equipment?.status}
             </Typography>
-            <Typography variant="h6" className={styles.deviceName}>
+            <Typography variant="body1" className={styles.deviceName}>
               {equipment?.name}
             </Typography>
             <Typography variant="body2" className={styles.deviceQuantity}>

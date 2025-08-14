@@ -1,21 +1,24 @@
+
 export const dataGridSx = {
   background: "#111",
   color: "#fff",
   border: "none",
   "& .MuiDataGrid-columnHeader": {
     backgroundColor: "#111 !important",
-    borderBottom: "1px solid #888",
+    borderBottom: "1px solid #888 !important",
     overflow: "hidden",
     textOverflow: "ellipsis",
     whiteSpace: "nowrap",
+    padding: "0px !important",
   },
   "& .MuiDataGrid-row--borderBottom": {
     borderBottom: "1px solid #888 !important",
   },
   "& .MuiDataGrid-cell": {
-    borderTop: "none !important",
+    borderTop: "1px solid #888 !important",
     whiteSpace: "nowrap",
     overflow: "hidden",
+    padding:" 0px 12px !important", 
     textOverflow: "ellipsis",
   },
   "& .css-1ir2opr": {

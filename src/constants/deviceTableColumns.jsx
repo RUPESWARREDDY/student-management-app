@@ -4,7 +4,7 @@ const statusChip = (value) => (
   <Chip
     label={value}
     sx={{
-      backgroundColor: "rgba(0, 255, 0, 0.4)",
+      backgroundColor: "rgba(39, 135, 39 ,0.4);",
       color: "white !important",
     }}
     size="small"

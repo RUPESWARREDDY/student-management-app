@@ -1,11 +1,12 @@
 .navbar-root {
     background-color: #000;
     color: #fff;
-    padding: 8px 32px;
+    padding: 8px 48px;
   }
   
   .navbar-appbar {
     background-color: #000 !important;
+    padding: 0px !important;
   }
   .logo{
     color: grey;
@@ -16,6 +17,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 1rem;
+    padding: 0px !important;
   }
   
   .navbar-brand {
@@ -60,4 +62,8 @@
     color: white ! important;
     font-weight: 700 ! important;
   }
-  
+  @media (min-width: 600px) {
+    .navbar-toolbar {
+        padding:0px 0px !important;
+    }
+  }
