@@ -12,10 +12,11 @@ export const dataGridSx = {
     padding: "6px !important",
   },
   "& .MuiDataGrid-row--borderBottom": {
-    borderBottom: "1px solid #888 !important",
+    borderBottom: "0px solid #888 !important",
   },
   "& .MuiDataGrid-cell": {
-    borderTop: "1px solid #888 !important",
+    borderTop: "none !important",
+    borderBottom: "1px solid #888 !important",
     whiteSpace: "nowrap",
     overflow: "hidden",
     padding:" 0px 10px !important", 
@@ -54,7 +55,8 @@ export const dataGridSx = {
       borderTop: "none !important",
   },
   "& .css-1j5bb80-MuiDataGrid-root,.MuiDataGrid-scrollbarFiller": {
-    minWidth : "0 !important"
+    minWidth : "0 !important",
+    borderBottom: "none !important",
   },
   "& css-19tm4aw-MuiDataGrid-root, .MuiDataGrid-columnHeaders,.MuiDataGrid-filler": {
    background: "none !important",
