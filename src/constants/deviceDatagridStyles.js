@@ -9,7 +9,7 @@ export const dataGridSx = {
     overflow: "hidden",
     textOverflow: "ellipsis",
     whiteSpace: "nowrap",
-    padding: "0px !important",
+    padding: "6px !important",
   },
   "& .MuiDataGrid-row--borderBottom": {
     borderBottom: "1px solid #888 !important",
@@ -18,8 +18,9 @@ export const dataGridSx = {
     borderTop: "1px solid #888 !important",
     whiteSpace: "nowrap",
     overflow: "hidden",
-    padding:" 0px 12px !important", 
+    padding:" 0px 10px !important", 
     textOverflow: "ellipsis",
+    textAlign: "left",
   },
   "& .css-1ir2opr": {
     outline: "none",
