@@ -50,7 +50,8 @@ describe("DevicesTable", () => {
     const consoleSpy = vi.spyOn(console, "error").mockImplementation(() => {});
     axios.get.mockRejectedValue(new Error("Network error"));
 
-    render(<DevicesTable />);
+    // render(<DevicesTable />);
+    render(<DevicesTable fitnessVisibleCols={["id", "name"]} assetVisibleCols={["id", "name"]} />);
 
     await waitFor(() => {
       expect(axios.get).toHaveBeenCalledTimes(2);

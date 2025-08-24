@@ -58,8 +58,11 @@ export const dataGridSx = {
     minWidth : "0 !important",
     borderBottom: "none !important",
   },
-  "& css-19tm4aw-MuiDataGrid-root, .MuiDataGrid-columnHeaders,.MuiDataGrid-filler": {
+  "& .css-19tm4aw-MuiDataGrid-root, .MuiDataGrid-columnHeaders,.MuiDataGrid-filler": {
    background: "none !important",
+  },
+  "& .css-1y0ythw-MuiDataGrid-root,.MuiDataGrid-row--borderBottom, .MuiDataGrid-filler": {
+   borderBottom: "1px solid #877 !important",
   },
   "& .MuiDataGrid-columnSeparator": {
     maxWidth: "0 !important",

@@ -31,7 +31,7 @@ const EquipmentCard = ({ equipment }) => {
         <Box className={styles.cardHeader}>
           <CardMedia
             component="img"
-            image={equipment?.image || "/src/assets/threadmill.png"}
+            image={equipment?.image || "/src/assets/threadmill1.jpeg"}
             alt="image"
             className={styles.media}
           />
@@ -47,7 +47,7 @@ const EquipmentCard = ({ equipment }) => {
             </Typography>
           </CardContent>
         </Box>
-        <CardContent>
+        <CardContent sx={{paddingX:0,paddingY:2}}>
           <Box>
             <Typography variant="body2" className={styles.reasonText}>
               Reason{" "}
@@ -61,6 +61,15 @@ const EquipmentCard = ({ equipment }) => {
                 label={equipment?.maintenance}
                 size="small"
                 className={styles.maintenance}
+                sx={{
+                  backgroundColor: "transparent", 
+                  "& .MuiChip-label": {
+                    color: "inherit", 
+                  },
+                  "&:hover": {
+                    backgroundColor: "transparent",
+                  },
+                }}
               />
             </Typography>
           </Box>

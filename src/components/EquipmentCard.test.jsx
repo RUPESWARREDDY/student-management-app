@@ -47,7 +47,7 @@ describe("EquipmentCard Component", () => {
   it("renders equipment image with correct src and alt", () => {
     render(<EquipmentCard equipment={mockEquipment} />);
     const img = screen.getByRole("img", { name: /image/i });
-    expect(img).toHaveAttribute("src", "/src/assets/threadmill.png");
+    expect(img).toHaveAttribute("src", "/src/assets/threadmill1.jpeg");
     expect(img).toHaveAttribute("alt", "image");
   });
 

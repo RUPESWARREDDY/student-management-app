@@ -66,11 +66,11 @@ describe("Table Component", () => {
 
   it("shows ExpandMoreIcon when expanded=true", () => {
     render(<Table {...baseProps} expanded={true} />);
-    expect(screen.getByTestId("ExpandMoreIcon")).toBeInTheDocument();
+    expect(screen.getByTestId("ExpandLessIcon")).toBeInTheDocument();
   });
 
   it("shows ExpandLessIcon when expanded=false", () => {
     render(<Table {...baseProps} expanded={false} />);
-    expect(screen.getByTestId("ExpandLessIcon")).toBeInTheDocument();
+    expect(screen.getByTestId("ExpandMoreIcon")).toBeInTheDocument();
   });
 });

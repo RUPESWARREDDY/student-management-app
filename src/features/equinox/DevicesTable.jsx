@@ -3,7 +3,7 @@ import axios from "axios";
 import DeviceTable from "../../components/Table";
 import { fitnessColumns, assetsColumns } from "../../constants/deviceTableColumns";
 
-export default function DevicesTable() {
+export default function DevicesTable({ fitnessVisibleCols=[], assetVisibleCols=[]}) {
   const [devices, setDevices] = useState([]);
   const [assets, setAssets] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -36,7 +36,7 @@ export default function DevicesTable() {
         title="Fitness Devices"
         count={devices.length}
         rows={devices}
-        columns={fitnessColumns}
+        columns={fitnessColumns.filter((c) => fitnessVisibleCols.includes(c.field))}
         loading={loading}
         expanded={showDevices}
         onToggle={() => {
@@ -47,7 +47,7 @@ export default function DevicesTable() {
         title="IT Assets"
         count={assets.length}
         rows={assets}
-        columns={assetsColumns}
+        columns={assetsColumns.filter((c) => assetVisibleCols.includes(c.field))}
         loading={loading}
         expanded={showAssets}
         onToggle={() => {

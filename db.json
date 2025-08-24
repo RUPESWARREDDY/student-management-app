@@ -51,6 +51,12 @@
       "name": "Alice",
       "age": 10,
       "grade": "A"
+    },
+    {
+      "id": "45ec",
+      "name": "Alice",
+      "age": 10,
+      "grade": "A"
     }
   ],
   "outoforder": [
@@ -61,7 +67,7 @@
       "status": "Out of order",
       "reason": "Exceeded the lifetime mileage",
       "maintenance": "In progress",
-      "image": "/src/assets/threadmill.png"
+      "image": "/src/assets/threadmill1.jpeg"
     },
     {
       "id": "2",
@@ -70,7 +76,7 @@
       "status": "Out of order",
       "reason": "Power supply problem",
       "maintenance": "In progress",
-      "image": "/src/assets/threadmill.png"
+      "image": "/src/assets/threadmill1.jpeg"
     },
     {
       "id": "3",
@@ -79,7 +85,7 @@
       "status": "Out of order",
       "reason": "lifetime mileage",
       "maintenance": "In progress",
-      "image": "/src/assets/threadmill.png"
+      "image": "/src/assets/threadmill1.jpeg"
     },
     {
       "id": "4",
@@ -88,7 +94,7 @@
       "status": "Out of order",
       "reason": "Improve musile strength",
       "maintenance": "In progress",
-      "image": "/src/assets/threadmill.png"
+      "image": "/src/assets/threadmill1.jpeg"
     },
     {
       "id": "5",
@@ -97,7 +103,7 @@
       "status": "Out of order",
       "reason": "Improve musile strength",
       "maintenance": "In progress",
-      "image": "/src/assets/threadmill.png"
+      "image": "/src/assets/threadmill1.jpeg"
     }
   ],
   "fitnessdevices": [

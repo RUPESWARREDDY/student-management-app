@@ -21,7 +21,7 @@ export default function Table({
         <Typography variant="body2">
           {title} {count}
         </Typography>
-        {expanded ? <ExpandMoreIcon /> : <ExpandLessIcon />}
+        {expanded ? <ExpandLessIcon /> :<ExpandMoreIcon /> }
       </Box>
       {expanded && (
         <Box className={styles.dataGridContainer}>

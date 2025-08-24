@@ -33,8 +33,8 @@ export default function App() {
               }
             : {
                 background: {
-                  default: "#f5f5f5",
-                  paper: "#ffffff",
+                  default: "#00000",
+                  paper: "#000000",
                 },
                 text: {
                   primary: "#000000",

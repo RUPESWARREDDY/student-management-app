@@ -1,10 +1,10 @@
-import { Chip } from "@mui/material";
+import { Chip, Box, MenuItem, Select  } from "@mui/material";
 
 const statusChip = (value) => (
   <Chip
     label={value}
     sx={{
-      backgroundColor: "rgba(39, 135, 39 ,0.4);",
+      backgroundColor: "rgba(104, 197, 104, 0.4);",
       color: "white !important",
     }}
     size="small"
@@ -33,7 +33,62 @@ export const fitnessColumns = [
     headerName: "EQUIPMENT STATUS",
     minWidth: 200,
     flex: 1,
-    renderCell: (params) => statusChip(params.value),
+renderCell: (params) => {
+  const value = params.value;
+  const isActive = value === "Active";
+  const handleChange = (e) => {
+    const newValue = e.target.value;
+
+    // Update the row in DataGrid
+    params.api.updateRows([
+      { id: params.id, equipmentStatus: newValue }
+    ]);
+  };
+  return (
+   <Box sx={{ display: "flex", alignItems: "center", gap: 1,height: "100%" }}>
+     <Box
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: isActive ? "#e6f4eb" : "#fdecea", 
+        borderRadius: "15px",
+        width:"100px",
+        padding: "0px 4px",
+        gap: 1,
+      }}
+    >
+      <Box
+        sx={{
+          width: 8,
+          height: 8,
+          borderRadius: "50%",
+          backgroundColor: isActive ? "green" : "red",
+        }}
+      />
+      <Select
+        color="primary"
+        size="small"
+        value={value}
+        disableUnderline
+        onChange={ handleChange}
+        variant="standard"
+        sx={{
+          fontSize: "0.85rem",
+          color: isActive ? "green" : "red",
+          "& .MuiSelect-icon": {
+            color: isActive ? "green" : "red",
+          },
+        }}
+      >
+        <MenuItem value="Active">Active</MenuItem>
+        <MenuItem value="Inactive">Inactive</MenuItem>
+      </Select>
+    </Box>
+   </Box>
+  );
+}
+
   },
   {
     field: "powerMeterStatus",
